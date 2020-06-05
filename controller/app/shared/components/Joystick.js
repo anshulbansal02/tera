@@ -91,7 +91,7 @@ export default class Joystick extends Component {
 
 	render() {
 		return (
-			<View style={style.joystick}>
+			<View style={[style.joystick, this.props.style]}>
 				<View style={style.base}>
 					<PanGestureHandler
 						onGestureEvent={this.handleDrag}
@@ -121,8 +121,8 @@ export default class Joystick extends Component {
 
 const style = StyleSheet.create({
 	joystick: {
-		width: 150,
-		height: 150,
+		width: 130,
+		height: 130,
 		alignItems: "center",
 		justifyContent: "center",
 	},

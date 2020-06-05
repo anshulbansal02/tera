@@ -58,6 +58,7 @@ export default class Switch extends Component {
 
 		return (
 			<TouchableWithoutFeedback
+				style={this.props.style}
 				onPress={this.toggle}
 				accessibilityRole="switch"
 			>
@@ -65,6 +66,7 @@ export default class Switch extends Component {
 					<Animated.View
 						style={[style.thumb, { left: this.anim_pos }]}
 					></Animated.View>
+
 				</Animated.View>
 			</TouchableWithoutFeedback>
 		);
@@ -88,8 +90,6 @@ const style = StyleSheet.create({
 	},
 
 	track: {
-		top: 200,
-		left: 100,
 		width: 60,
 		height: 35,
 		backgroundColor: "rgba(0,0,0,0.15)",
