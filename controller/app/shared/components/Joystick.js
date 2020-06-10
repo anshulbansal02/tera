@@ -17,8 +17,12 @@ import Animated, {
 	min,
 	cos,
 	sin,
+	Clock
 } from "react-native-reanimated";
 import { atan2 } from "react-native-redash";
+
+
+
 
 export default class Joy extends Component {
 	constructor(props) {
@@ -74,6 +78,8 @@ export default class Joy extends Component {
 		this.anim_y = cond(eq(this.touchState, State.ACTIVE), this.transY);
 	}
 
+
+
 	onValue = ([x, y]) => {
 		// console.log(x,y)
 		this.props.onValue ? this.props.onValue(x,y) : null;
@@ -113,11 +119,8 @@ const style = StyleSheet.create({
 	joystick: {
 		width: 130,
 		height: 130,
-		top: 200,
-		left: 100,
 		alignItems: "center",
 		justifyContent: "center",
-		marginRight: 300,
 	},
 
 	base: {
